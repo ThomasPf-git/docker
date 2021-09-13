@@ -8,4 +8,12 @@
 
 4. use the various start and stop scripts for starting and stopping the services
 
+mysql credentials: 
+- user: ```root```
+- pw: ```docker_mysql```
+
+mongo credentials:
+- user: ```root```
+- pw: ```docker_mongo```
+
 (the del_all_img_docker.ps1 does just that -- you probably won't need it)
