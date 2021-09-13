@@ -1,30 +1,43 @@
 # version: "3.9"  # optional since v1.27.0
 services:
-  docker_mysql:
-    container_name: docker_mysql
+  docker_insy_mysql:
+    container_name: docker_insy_mysql
     image: mysql:latest
     restart: always
     ports:
       - "3306:3306"
     volumes:
-      - docker_mysql_data:/var/lib/mysql
+      - docker_insy_mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: docker_mysql
+
+  docker_sytd_mysql:
+    container_name: docker_sytd_mysql
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3307:3306"
+    volumes:
+      - docker_sytd_mysql_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: docker_mysql
   
-  docker_mongo:
-    container_name: docker_mongo
+  docker_insy_mongo:
+    container_name: docker_insy_mongo
     image: mongo:latest
     restart: always
     ports:
       - "27017:27017"
     volumes:
-      - docker_mongo_data:/data/db
+      - docker_insy_mongo_data:/data/db
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: docker_mongo
 
 volumes:
-  docker_mongo_data:
+  docker_insy_mongo_data:
     external: true
-  docker_mysql_data:
+  docker_insy_mysql_data:
+    external: true
+  docker_sytd_mysql_data:
     external: true
