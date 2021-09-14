@@ -1,2 +1,2 @@
 @echo off
-docker-compose start docker_mysql
+docker-compose start docker_insy_mysql
