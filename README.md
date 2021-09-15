@@ -13,6 +13,11 @@
 
 ---
 
+when there is an error regarding docker network, run the following
+```docker network create docker-school_default```
+
+---
+
 insy-mysql credentials: 
 - user: ```root```
 - pw: ```docker_mysql```
