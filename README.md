@@ -1,6 +1,7 @@
 # Docker Containers for various school subjects
 
 1. Clone Github Repository to a location which preferably isn't your Downloads folder
+   ```git clone https://github.com/ThomasPf-git/docker-school.git```
 
 2. ```cd docker-school```
 
