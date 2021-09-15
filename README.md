@@ -1,4 +1,4 @@
-# Docker Mysql Container
+# Docker Containers for various school subjects
 
 1. Clone Github Repository to a location which preferably isn't your Downloads folder
 
