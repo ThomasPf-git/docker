@@ -2,11 +2,15 @@
 
 1. Clone Github Repository to a location which preferably isn't your Downloads folder
 
+2. ```cd docker-school```
+
 2. Run ```.\1_create_docker_volumes.cmd``` to create the required volumes
 
 3. Run ```.\2_create_containers.cmd``` to create the containers
 
 4. use the various start and stop scripts for starting and stopping the services (or the GUI)
+
+---
 
 insy-mysql credentials: 
 - user: ```root```
