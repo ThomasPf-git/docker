@@ -1,2 +1,2 @@
 @echo off
-docker-compose stop docker_insy_mongo
+docker stop docker_insy_mongo
