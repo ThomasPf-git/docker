@@ -14,7 +14,7 @@
 ---
 
 when there is an error regarding docker network, run the following
-```docker network create docker-school_default```
+```docker network create docker-school_default``` replace docker-school_default with the network that is missing 
 
 ---
 
