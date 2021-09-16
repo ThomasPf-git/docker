@@ -50,5 +50,5 @@ volumes:
 
 networks:
   lan1:
-    external:
-      name: subjects-net
+    external: true
+    name: subjects-net
