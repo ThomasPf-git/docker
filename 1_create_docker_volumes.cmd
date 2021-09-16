@@ -1,4 +1,0 @@
-@echo off
-docker volume create docker_insy_mysql_data
-docker volume create docker_insy_mongo_data
-docker volume create docker_sytd_mysql_data

@@ -1,43 +1,54 @@
 # version: "3.9"  # optional since v1.27.0
 services:
-  docker_insy_mysql:
-    container_name: docker_insy_mysql
+  insy-mysql:
+    container_name: insy-mysql
     image: mysql:latest
     restart: always
     ports:
       - "3306:3306"
     volumes:
-      - docker_insy_mysql_data:/var/lib/mysql
+      - insy-mysql-vol:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: docker_mysql
+      MYSQL_ROOT_PASSWORD: mysql
+    networks:
+      - lan1
 
-  docker_sytd_mysql:
-    container_name: docker_sytd_mysql
+  sytd-mysql:
+    container_name: sytd-mysql
     image: mysql:latest
     restart: always
     ports:
       - "3307:3306"
     volumes:
-      - docker_sytd_mysql_data:/var/lib/mysql
+      - sytd-mysql-vol:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: docker_mysql
+      MYSQL_ROOT_PASSWORD: mysql
+    networks:
+      - lan1
   
-  docker_insy_mongo:
-    container_name: docker_insy_mongo
+  insy-mongo:
+    container_name: insy-mongo
     image: mongo:latest
     restart: always
     ports:
       - "27017:27017"
     volumes:
-      - docker_insy_mongo_data:/data/db
+      - insy-mongo-vol:/data/db
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: docker_mongo
+      MONGO_INITDB_ROOT_PASSWORD: mongo
+    networks:
+      - lan1
 
 volumes:
-  docker_insy_mongo_data:
+  insy-mongo-vol:
     external: true
-  docker_insy_mysql_data:
+  insy-mysql-vol:
     external: true
-  docker_sytd_mysql_data:
+  sytd-mysql-vol:
     external: true
+
+networks:
+  lan1:
+    external:
+      name: subjects-net
