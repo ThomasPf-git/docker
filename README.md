@@ -30,4 +30,6 @@ insy-mongo credentials:
 - pw: ```mongo```
 - port: ```27017```
 
-(the del_all_img_docker.ps1 does just that -- you probably won't need it)
+---
+
+use the rmx-scripts to remove previously created docker components
