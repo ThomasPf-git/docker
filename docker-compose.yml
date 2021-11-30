@@ -18,7 +18,7 @@ services:
     image: mysql:latest
     restart: always
     ports:
-      - "3307:3306"
+      - "3388:3306"
     volumes:
       - sytd-mysql-vol:/var/lib/mysql
     environment:
