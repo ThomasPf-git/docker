@@ -1,0 +1,15 @@
+services:
+  sytd-mysql:
+    container_name: sytd-mysql
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3399:3306"
+    volumes:
+      - sytd-mysql-vol:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+
+volumes:
+  sytd-mysql-vol:
+    name: sytd-mysql-vol

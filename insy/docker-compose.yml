@@ -1,30 +1,14 @@
-# version: "3.9"  # optional since v1.27.0
 services:
   insy-mysql:
     container_name: insy-mysql
     image: mysql:latest
     restart: always
     ports:
-      - "3308:3306"
+      - "3398:3306"
     volumes:
       - insy-mysql-vol:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: mysql
-    networks:
-      - lan1
-
-  sytd-mysql:
-    container_name: sytd-mysql
-    image: mysql:latest
-    restart: always
-    ports:
-      - "3388:3306"
-    volumes:
-      - sytd-mysql-vol:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: mysql
-    networks:
-      - lan1
   
   insy-mongo:
     container_name: insy-mongo
@@ -37,18 +21,9 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: mongo
-    networks:
-      - lan1
 
 volumes:
   insy-mongo-vol:
-    external: true
+    name: insy-mongo-vol
   insy-mysql-vol:
-    external: true
-  sytd-mysql-vol:
-    external: true
-
-networks:
-  lan1:
-    external: true
-    name: subjects-net
+    name: insy-mysql-vol
