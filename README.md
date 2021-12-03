@@ -5,9 +5,9 @@
 
 2. open ```insy``` or ```sytd``` folder
 
-2. Run ```docker-compose up -d``` to create the required volumes and networks and containers
+2. Run ```docker-compose up -d``` in terimal to create the required volumes and networks and containers
 
-3. do this for the other folder if u want to
+3. do this for the other folder too if u want to
 
 ---
 
@@ -38,6 +38,7 @@ manage everything else from docker desktop
 changelog:
 
 now u dont need to create volumes or networks beforehand, everything gets spinned up with the docker-compose command
+data is still persistent across restarting containers - no worries
 should be easier to use now
 
 ---
