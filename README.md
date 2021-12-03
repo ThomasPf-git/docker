@@ -37,8 +37,8 @@ manage everything else from docker desktop
 
 changelog:
 
-now u dont need to create volumes or networks beforehand, everything gets spinned up with the docker-compose command
-data is still persistent across restarting containers - no worries
+now u dont need to create volumes or networks beforehand, everything gets spinned up with the docker-compose command  
+data is still persistent across restarting containers - no worries  
 should be easier to use now
 
 ---
