@@ -1,7 +1,7 @@
 services:
   insy-mysql:
     container_name: insy-mysql
-    image: mysql:latest
+    image: mysql:8.0.26
     restart: always
     ports:
       - "3398:3306"

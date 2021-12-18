@@ -1,10 +1,10 @@
 services:
   sytd-mysql:
     container_name: sytd-mysql
-    image: mysql:latest
+    image: mysql:8.0.26
     restart: always
     ports:
-      - "3399:3306"
+      - "3397:3306"
     volumes:
       - sytd-mysql-vol:/var/lib/mysql
     environment:
