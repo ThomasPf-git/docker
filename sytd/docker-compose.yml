@@ -10,6 +10,21 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: mysql
 
+  sytd-rabbitmq:
+    container_name: sytd-rabbitmq
+    image: rabbitmq:management
+    restart: always
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    volumes:
+      - sytd-rabbitmq-vol-data:/var/lib/rabbitmq/
+      - sytd-rabbitmq-vol-log:/var/lib/rabbitmq
+
 volumes:
   sytd-mysql-vol:
     name: sytd-mysql-vol
+  sytd-rabbitmq-vol-data:
+    name: sytd-rabbitmq-vol-data
+  sytd-rabbitmq-vol-log:
+    name: sytd-rabbitmq-vol-log
