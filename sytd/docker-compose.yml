@@ -2,7 +2,6 @@ services:
   sytd-mysql:
     container_name: sytd-mysql
     image: mysql:8.0.26
-    restart: always
     ports:
       - "3397:3306"
     volumes:
@@ -13,7 +12,6 @@ services:
   sytd-rabbitmq:
     container_name: sytd-rabbitmq
     image: rabbitmq:management
-    restart: always
     ports:
       - "15672:15672"
       - "5672:5672"

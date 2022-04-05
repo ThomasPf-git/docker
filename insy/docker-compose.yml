@@ -2,7 +2,6 @@ services:
   insy-mysql:
     container_name: insy-mysql
     image: mysql:8.0.26
-    restart: always
     ports:
       - "3398:3306"
     volumes:
@@ -10,20 +9,19 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: mysql
   
-  insy-mongo:
-    container_name: insy-mongo
-    image: mongo:latest
-    restart: always
-    ports:
-      - "27017:27017"
-    volumes:
-      - insy-mongo-vol:/data/db
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: mongo
+  # insy-mongo:
+  #   container_name: insy-mongo
+  #   image: mongo:latest
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - insy-mongo-vol:/data/db
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: root
+  #     MONGO_INITDB_ROOT_PASSWORD: mongo
 
 volumes:
-  insy-mongo-vol:
-    name: insy-mongo-vol
+  # insy-mongo-vol:
+  #   name: insy-mongo-vol
   insy-mysql-vol:
     name: insy-mysql-vol
