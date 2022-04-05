@@ -8,20 +8,7 @@ services:
       - insy-mysql-vol:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: mysql
-  
-  # insy-mongo:
-  #   container_name: insy-mongo
-  #   image: mongo:latest
-  #   ports:
-  #     - "27017:27017"
-  #   volumes:
-  #     - insy-mongo-vol:/data/db
-  #   environment:
-  #     MONGO_INITDB_ROOT_USERNAME: root
-  #     MONGO_INITDB_ROOT_PASSWORD: mongo
 
 volumes:
-  # insy-mongo-vol:
-  #   name: insy-mongo-vol
   insy-mysql-vol:
-    name: insy-mysql-vol
+    name: insy-mysql
